@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>A2</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Scotland Historical Battlefields Explorer</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
+</head>
+<body>
+
+<div id="map"></div>
+
+<div id="features">
+    <div class="sidebar-header">
+        <h2>Battlefield Details</h2>
+    </div>
+    <div id="info-content" class="sidebar-body">
+        <p class="instruction-text">Hover over a battlefield area to view data.</p>
+    </div>
+    <div class="sidebar-footer">
+        <p>Source: Historic Environment Scotland</p>
+    </div>
+</div>
+
+<div id="console" class="map-overlay">
+    <h1>Map Controls</h1>
+    
+    <div class="session">
+        <h3>Base Map</h3>
+        <div id="style-switcher" class="row">
+            <input id="light-v11" type="radio" name="rtoggle" value="light" checked="checked">
+            <label for="light-v11">Standard</label>
+            <input id="satellite-v9" type="radio" name="rtoggle" value="satellite">
+            <label for="satellite-v9">Satellite</label>
+        </div>
+    </div>
+
+    <div class="session">
+        <h3>Filter by Authority</h3>
+        <select id="auth-filter">
+            <option value="all">All Scotland</option>
+            <option value="Stirling">Stirling</option>
+            <option value="Aberdeenshire">Aberdeenshire</option>
+            <option value="Perth and Kinross">Perth and Kinross</option>
+            <option value="Highland">Highland</option>
+            <option value="East Lothian">East Lothian</option>
+        </select>
+    </div>
+
+    <div class="session" id="legend">
+        <h3>Site Area (sqm)</h3>
+        <div class="legend-row"><span class="color-box" style="background-color: #fdbb2d"></span> Smaller</div>
+        <div class="legend-row"><span class="color-box" style="background-color: #e55e5e"></span> Major / Large</div>
+    </div>
+</div>
+
+</body>
+</html>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>

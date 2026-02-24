@@ -1,0 +1,47 @@
+body { margin: 0; padding: 0; font-family: 'Helvetica Neue', Arial, sans-serif; color: #333; }
+#map { position: absolute; top: 0; bottom: 0; left: 300px; right: 0; }
+
+#features {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    background: #fff;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+}
+
+.sidebar-header { padding: 20px; background: #2c3e50; color: #fff; }
+.sidebar-header h2 { margin: 0; font-size: 18px; }
+.sidebar-body { padding: 20px; flex-grow: 1; overflow-y: auto; }
+.sidebar-footer { padding: 10px 20px; background: #f8f9fa; font-size: 11px; border-top: 1px solid #eee; }
+
+.map-overlay {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 5;
+}
+
+#console { bottom: 30px; right: 20px; width: 240px; }
+h1 { font-size: 15px; margin: 0 0 12px 0; text-transform: uppercase; }
+h3 { font-size: 12px; margin-bottom: 8px; color: #666; }
+
+.session { margin-bottom: 20px; }
+#auth-filter { width: 100%; padding: 6px; border-radius: 4px; border: 1px solid #ccc; }
+
+.legend-row { display: flex; align-items: center; margin-bottom: 5px; font-size: 12px; }
+.color-box { width: 30px; height: 12px; border-radius: 2px; margin-right: 10px; }
+.instruction-text { color: #999; font-style: italic; }
+.data-title { font-size: 16px; color: #e74c3c; font-weight: bold; margin-bottom: 10px; display: block;}
+
+@media screen and (max-width: 768px) {
+    #features { width: 100%; height: 30%; bottom: 0; top: auto; }
+    #map { left: 0; bottom: 30%; }
+    #console { display: none; }
+}
